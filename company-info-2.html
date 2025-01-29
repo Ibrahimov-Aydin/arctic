@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Данные о компании 2</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <link href="https://unpkg.com/vis-timeline/styles/vis-timeline-graph2d.min.css?_v=20250129130708" rel="stylesheet"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css?_v=20250129130708">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css?_v=20250129130708" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker.min.css?_v=20250129130708">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250129130708">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header data-scroll="10" class="header header_login">
+			<div class="header__container">
+				<a class="header__logo logo" href="index.html">
+					<img src="img/logos/logo.svg" alt="icon: logo">
+				</a>
+				<!-- menu -->
+				<div class="header__menu menu">
+					<button type="button" class="menu__icon icon-menu">
+						<img src="img/icons/burger.svg" alt="">
+					</button>
+					<nav class="menu__body">
+						<button class="menu__close">
+							<img src="img/icons/burger-close.svg" alt="icon: close">
+						</button>
+						</button>
+						<ul class="menu__list">
+							<li class="menu__item"><a href="#" class="menu__link menu__link_active">Наш автопарк</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Календарь бронирования</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Как арендовать?</a></li>
+						</ul>
+						<nav class="menu__footer footer-menu">
+							<ul>
+								<li><a href="#">Политика конфиденциальности</a></li>
+								<li><a href="#">Данные о компании</a></li>
+								<li><a href="#">Публичная оферта</a></li>
+							</ul>
+						</nav>
+					</nav>
+				</div>
+				<div class="header__actions">
+					<ul data-da=".menu__body, 991.98, last" class="header__info-list info-list">
+						<li><a href="#">+7 (916) 616-02-20</a></li>
+						<li>Работаем с 10:00 до 22:00</li>
+					</ul>
+					<div class="header__cta">
+						<button class="header__button button button_transparent">Регистрация</button>
+						<button class="button button_blue button_login">
+							<span class="login" style="--icon: url(../../img/icons/login.svg)"></span>
+							<span class="button__text">Вход</span>
+						</button>
+					</div>
+					<div class="header__user-info user-info">
+						<div class="user-info__avatar">
+							<span class="user-info__short">ДМ</span>
+							<span class="user-info__name">ДядюшкаМаффин</span>
+						</div>
+						<button class="user-info__logout logout">
+							<img src="img/icons/logout.svg" alt="icon: logout">
+						</button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<nav class="breadcrumps">
+				<div class="breadcrumps__container">
+					<ul class="breadcrumps__list">
+						<li>
+							<a href="index.html">Главная</a>
+						</li>
+						<li>
+							Личный кабинет
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<div class="page__container">
+				<aside class="sidebar pin-block aside-configurator">
+					<ul class="sidebar__list">
+						<li>
+							<a href="#">
+								<span class="sidebar__item-link" style="--icon: url(img/icons/calendar.svg)"></span>
+								<span class="sidebar__type">Календарь машин</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="sidebar__item-link" style="--icon: url(img/icons/key.svg)"></span>
+								<span class="sidebar__type">Бронирование</span>
+							</a>
+						</li>
+						<li class="active">
+							<a class="active" href="#">
+								<span class="sidebar__item-link" style="--icon: url(img/icons/Info.svg)"></span>
+								<span class="sidebar__type">Данные о компании</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="sidebar__item-link" style="--icon: url(img/icons/drivers.svg)"></span>
+								<span class="sidebar__type">Водители</span>
+							</a>
+						</li>
+					</ul>
+				</aside>
+				<section class="info-content">
+					<div class="info-content__title">Данные о компании</div>
+					<form action="#" class="info-content__form info-content__form_grid">
+						<div class="info-content__line">
+							<label for="i1" class="info-content__label-input">Полное наименование</label>
+							<input id="i1" class="input" type="text" placeholder="ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ 'АЛЬКОР И КО'">
+						</div>
+						<div class="info-content__wrapper-3">
+							<div class="info-content__line">
+								<label for="i2" class="info-content__label-input">ИНН</label>
+								<input id="i2" class="input" type="text" placeholder="Введите данные">
+							</div>
+							<div class="info-content__line">
+								<label for="i3" class="info-content__label-input">КПП</label>
+								<input id="i3" class="input" type="text" placeholder="Введите данные">
+							</div>
+							<div class="info-content__line">
+								<label for="i4" class="info-content__label-input">ОГРН</label>
+								<input id="i4" class="input input_error" type="text" placeholder="Поле заполнено неверно">
+							</div>
+						</div>
+						<div class="info-content__wrapper-2">
+							<div class="info-content__line">
+								<label for="i5" class="info-content__label-input">Банк</label>
+								<input id="i5" class="input" type="text" placeholder="Введите данные">
+							</div>
+							<div class="info-content__line">
+								<label for="i6" class="info-content__label-input">БИК</label>
+								<input id="i6" class="input" type="text" placeholder="Введите данные">
+							</div>
+						</div>
+						<div class="info-content__wrapper-2">
+							<div class="info-content__line">
+								<label for="i7" class="info-content__label-input">Расчетный счет</label>
+								<input id="i7" class="input" type="text" placeholder="Введите данные">
+							</div>
+							<div class="info-content__line">
+								<label for="i8" class="info-content__label-input">Корреспондентский счёт</label>
+								<input id="i8" class="input" type="text" placeholder="Введите данные">
+							</div>
+						</div>
+						<div class="info-content__line">
+							<label for="i9" class="info-content__label-input">Юридический адрес</label>
+							<input id="i9" class="input" type="text" placeholder="Введите данные">
+						</div>
+						<div class="info-content__wrapper-2">
+							<div class="info-content__line">
+								<label for="i10" class="info-content__label-input">Должность руководителя</label>
+								<input id="i10" class="input" type="text" placeholder="Введите данные">
+							</div>
+							<div class="info-content__line">
+								<label for="i11" class="info-content__label-input">ФИО руководителя</label>
+								<input id="i11" class="input" type="text" placeholder="Введите данные">
+							</div>
+						</div>
+						<button class="info-content__button-link button-link">
+							Сохранить
+							<span class="button-link__icon" style="--icon: url(../img/icons/arrow-right.svg)"></span>
+						</button>
+					</form>
+				</section>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__top">
+					<a href="index.html" class="footer__logo logo">
+						<img src="img/logos/dark-logo.svg" alt="icon">
+					</a>
+					<nav class="footer__menu">
+						<ul>
+							<li><a href="#">Наш автопарк</a></li>
+							<li><a href="#">Календарь бронирования</a></li>
+							<li><a href="#">Как арендовать</a></li>
+						</ul>
+					</nav>
+					<ul class="footer__info-list info-list info-list_dark">
+						<li><a href="#">+7 (916) 616-02-20</a></li>
+						<li>Работаем с 10:00 до 22:00</li>
+					</ul>
+				</div>
+
+				<div class="footer__bottom">
+					<div class="footer__content">
+						<p class="footer__text">
+							Вся представленная информация на сайте носит исключительно информационный характер и не является офертой
+						</p>
+						<p class="footer__copywrite">© 2024 Все права защищены</p>
+					</div>
+					<ul class="footer__list">
+						<li>
+							<a href="#">
+								Политика конфиденциальности
+								<span class="link-icon" style="--icon: url(../img/icons/link-arrow-dark.svg)"></span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Данные о компании
+								<span class="link-icon" style="--icon: url(../img/icons/link-arrow-dark.svg)"></span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Публичная оферта
+								<span class="link-icon" style="--icon: url(../img/icons/link-arrow-dark.svg)"></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- <div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+				Text
+			</div>
+		</div>
+	</div>
+</div> -->
+
+
+
+
+	<div class="modal micromodal-slide" id="modal-restore-access" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+				<header class="modal__header">
+					<h2 class="modal__title" id="modal-1-title">Восстановление доступа</h2>
+					<button class="modal__close" aria-label="Close modal" data-micromodal-close>
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M13.4143 12.0002L18.7072 6.70725C19.0982 6.31625 19.0982 5.68425 18.7072 5.29325C18.3162 4.90225 17.6842 4.90225 17.2933 5.29325L12.0002 10.5862L6.70725 5.29325C6.31625 4.90225 5.68425 4.90225 5.29325 5.29325C4.90225 5.68425 4.90225 6.31625 5.29325 6.70725L10.5862 12.0002L5.29325 17.2933C4.90225 17.6842 4.90225 18.3162 5.29325 18.7072C5.48825 18.9022 5.74425 19.0002 6.00025 19.0002C6.25625 19.0002 6.51225 18.9022 6.70725 18.7072L12.0002 13.4143L17.2933 18.7072C17.4882 18.9022 17.7443 19.0002 18.0002 19.0002C18.2562 19.0002 18.5122 18.9022 18.7072 18.7072C19.0982 18.3162 19.0982 17.6842 18.7072 17.2933L13.4143 12.0002Z" fill="#131825" />
+						</svg>
+					</button>
+				</header>
+				<main class="modal__content" id="modal-1-content">
+					<p class="modal__text">
+						Введите почту, с которой зарегистрировались. Пришлем новый на почту.
+					</p>
+					<form action="#" class="modal__form">
+						<input type="text" class="modal__input input" placeholder="E-mail">
+						<button type="submit" class="modal__button">Получить пароль</button>
+					</form>
+				</main>
+				<footer class="modal__footer">
+					<button class="modal__t-btn">Вспомнил пароль</button>
+				</footer>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal micromodal-slide" id="modal-login" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+				<header class="modal__header">
+					<h2 class="modal__title" id="modal-1-title">Авторизация</h2>
+					<button class="modal__close" aria-label="Close modal" data-micromodal-close>
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M13.4143 12.0002L18.7072 6.70725C19.0982 6.31625 19.0982 5.68425 18.7072 5.29325C18.3162 4.90225 17.6842 4.90225 17.2933 5.29325L12.0002 10.5862L6.70725 5.29325C6.31625 4.90225 5.68425 4.90225 5.29325 5.29325C4.90225 5.68425 4.90225 6.31625 5.29325 6.70725L10.5862 12.0002L5.29325 17.2933C4.90225 17.6842 4.90225 18.3162 5.29325 18.7072C5.48825 18.9022 5.74425 19.0002 6.00025 19.0002C6.25625 19.0002 6.51225 18.9022 6.70725 18.7072L12.0002 13.4143L17.2933 18.7072C17.4882 18.9022 17.7443 19.0002 18.0002 19.0002C18.2562 19.0002 18.5122 18.9022 18.7072 18.7072C19.0982 18.3162 19.0982 17.6842 18.7072 17.2933L13.4143 12.0002Z" fill="#131825" />
+						</svg>
+					</button>
+				</header>
+				<main class="modal__content" id="modal-1-content">
+					<form action="#" class="modal__form">
+						<div class="modal__line modal__line_error">
+							<input type="text" class="modal__input input" placeholder="Логин">
+							<div class="modal__cta">
+								<div class="modal__error-icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0ZM10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2ZM10 14C10.5523 14 11 14.4477 11 15C11 15.5523 10.5523 16 10 16C9.44771 16 9 15.5523 9 15C9 14.4477 9.44771 14 10 14ZM10 4C10.5523 4 11 4.44772 11 5V11C11 11.5523 10.5523 12 10 12C9.44771 12 9 11.5523 9 11V5C9 4.44772 9.44771 4 10 4Z" fill="#FF4423" />
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="modal__line modal__line_error">
+							<input type="password" type="text" class="modal__input input password-input" placeholder="Пароль">
+							<div class="modal__cta">
+								<button class="password-toggle">
+									<img src="img/icons/eye-slash.svg" alt="icon">
+								</button>
+								<div class="modal__error-icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0ZM10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2ZM10 14C10.5523 14 11 14.4477 11 15C11 15.5523 10.5523 16 10 16C9.44771 16 9 15.5523 9 15C9 14.4477 9.44771 14 10 14ZM10 4C10.5523 4 11 4.44772 11 5V11C11 11.5523 10.5523 12 10 12C9.44771 12 9 11.5523 9 11V5C9 4.44772 9.44771 4 10 4Z" fill="#FF4423" />
+									</svg>
+								</div>
+							</div>
+						</div>
+						<p class="modal__error-message">Неверный логин или пароль</p>
+						<button type="submit" class="modal__button">Войти</button>
+					</form>
+				</main>
+				<footer class="modal__footer">
+					<a href="#" class="modal__t-btn">Забыли пароль?</a>
+					<p>Нет аккаунта? <a href="#" class="modal__t-btn">Зарегистрируйтесь</a></p>
+				</footer>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal micromodal-slide" id="modal-register" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+				<header class="modal__header">
+					<h2 class="modal__title" id="modal-1-title">Регистрация</h2>
+					<button class="modal__close" aria-label="Close modal" data-micromodal-close>
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M13.4143 12.0002L18.7072 6.70725C19.0982 6.31625 19.0982 5.68425 18.7072 5.29325C18.3162 4.90225 17.6842 4.90225 17.2933 5.29325L12.0002 10.5862L6.70725 5.29325C6.31625 4.90225 5.68425 4.90225 5.29325 5.29325C4.90225 5.68425 4.90225 6.31625 5.29325 6.70725L10.5862 12.0002L5.29325 17.2933C4.90225 17.6842 4.90225 18.3162 5.29325 18.7072C5.48825 18.9022 5.74425 19.0002 6.00025 19.0002C6.25625 19.0002 6.51225 18.9022 6.70725 18.7072L12.0002 13.4143L17.2933 18.7072C17.4882 18.9022 17.7443 19.0002 18.0002 19.0002C18.2562 19.0002 18.5122 18.9022 18.7072 18.7072C19.0982 18.3162 19.0982 17.6842 18.7072 17.2933L13.4143 12.0002Z" fill="#131825" />
+						</svg>
+					</button>
+				</header>
+				<main class="modal__content" id="modal-1-content">
+					<form action="#" class="modal__form">
+						<input type="text" class="modal__input input" placeholder="ФИО">
+						<input type="text" class="modal__input input" placeholder="Номер телефона">
+						<input type="text" class="modal__input input" placeholder="E-mail">
+						<button type="submit" class="modal__button">Войти</button>
+					</form>
+				</main>
+				<footer class="modal__footer">
+					<p class="modal__text">
+						Зарегистрироваться — значит согласиться на обработку персональных данных и с договором. Политика
+						обработки персональных
+						данных.
+					</p>
+				</footer>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal micromodal-slide" id="modal-login2" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+				<header class="modal__header">
+					<h2 class="modal__title" id="modal-1-title">Авторизация</h2>
+					<button class="modal__close" aria-label="Close modal" data-micromodal-close>
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M13.4143 12.0002L18.7072 6.70725C19.0982 6.31625 19.0982 5.68425 18.7072 5.29325C18.3162 4.90225 17.6842 4.90225 17.2933 5.29325L12.0002 10.5862L6.70725 5.29325C6.31625 4.90225 5.68425 4.90225 5.29325 5.29325C4.90225 5.68425 4.90225 6.31625 5.29325 6.70725L10.5862 12.0002L5.29325 17.2933C4.90225 17.6842 4.90225 18.3162 5.29325 18.7072C5.48825 18.9022 5.74425 19.0002 6.00025 19.0002C6.25625 19.0002 6.51225 18.9022 6.70725 18.7072L12.0002 13.4143L17.2933 18.7072C17.4882 18.9022 17.7443 19.0002 18.0002 19.0002C18.2562 19.0002 18.5122 18.9022 18.7072 18.7072C19.0982 18.3162 19.0982 17.6842 18.7072 17.2933L13.4143 12.0002Z" fill="#131825" />
+						</svg>
+					</button>
+				</header>
+				<main class="modal__content" id="modal-1-content">
+					<form action="#" class="modal__form">
+						<div class="modal__line">
+							<input type="text" class="modal__input input" placeholder="Логин">
+							<div class="modal__cta">
+								<div class="modal__error-icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0ZM10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2ZM10 14C10.5523 14 11 14.4477 11 15C11 15.5523 10.5523 16 10 16C9.44771 16 9 15.5523 9 15C9 14.4477 9.44771 14 10 14ZM10 4C10.5523 4 11 4.44772 11 5V11C11 11.5523 10.5523 12 10 12C9.44771 12 9 11.5523 9 11V5C9 4.44772 9.44771 4 10 4Z" fill="#FF4423" />
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="modal__line">
+							<input type="password" type="text" class="modal__input input password-input" placeholder="Пароль">
+							<div class="modal__cta">
+								<button class="password-toggle">
+									<img src="img/icons/eye-slash.svg" alt="icon">
+								</button>
+								<div class="modal__error-icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0ZM10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2ZM10 14C10.5523 14 11 14.4477 11 15C11 15.5523 10.5523 16 10 16C9.44771 16 9 15.5523 9 15C9 14.4477 9.44771 14 10 14ZM10 4C10.5523 4 11 4.44772 11 5V11C11 11.5523 10.5523 12 10 12C9.44771 12 9 11.5523 9 11V5C9 4.44772 9.44771 4 10 4Z" fill="#FF4423" />
+									</svg>
+								</div>
+							</div>
+						</div>
+						<button type="submit" class="modal__button">Войти</button>
+					</form>
+				</main>
+				<footer class="modal__footer">
+					<a href="#" class="modal__t-btn">Забыли пароль?</a>
+					<p>Нет аккаунта? <a href="#" class="modal__t-btn">Зарегистрируйтесь</a></p>
+				</footer>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal micromodal-slide" id="moda-company-info" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+				<header class="modal__header modal__header_col">
+					<h2 class="modal__title" id="modal-1-title">Нужно добавить
+						организацию, а потом
+						бронировать</h2>
+					<button class="modal__close" aria-label="Close modal" data-micromodal-close>
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M13.4143 12.0002L18.7072 6.70725C19.0982 6.31625 19.0982 5.68425 18.7072 5.29325C18.3162 4.90225 17.6842 4.90225 17.2933 5.29325L12.0002 10.5862L6.70725 5.29325C6.31625 4.90225 5.68425 4.90225 5.29325 5.29325C4.90225 5.68425 4.90225 6.31625 5.29325 6.70725L10.5862 12.0002L5.29325 17.2933C4.90225 17.6842 4.90225 18.3162 5.29325 18.7072C5.48825 18.9022 5.74425 19.0002 6.00025 19.0002C6.25625 19.0002 6.51225 18.9022 6.70725 18.7072L12.0002 13.4143L17.2933 18.7072C17.4882 18.9022 17.7443 19.0002 18.0002 19.0002C18.2562 19.0002 18.5122 18.9022 18.7072 18.7072C19.0982 18.3162 19.0982 17.6842 18.7072 17.2933L13.4143 12.0002Z" fill="#131825" />
+						</svg>
+					</button>
+				</header>
+				<footer class="modal__footer">
+					<button type="submit" class="modal__button">Продолжить</button>
+				</footer>
+			</div>
+		</div>
+	</div>
+	<script src="https://unpkg.com/vis-timeline/standalone/umd/vis-timeline-graph2d.min.js?_v=20250129130708"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js?_v=20250129130708"></script>
+	<script src="https://unpkg.com/leaflet/dist/leaflet.js?_v=20250129130708"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20250129130708" type="text/javascript"></script>
+	<script src="https://unpkg.com/micromodal/dist/micromodal.min.js?_v=20250129130708"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.1/dist/js/datepicker-full.min.js?_v=20250129130708"></script>
+	<script src="js/app.min.js?_v=20250129130708"></script>
+</body>
+
+</html>
